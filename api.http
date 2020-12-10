@@ -1,0 +1,49 @@
+//Get all
+###
+GET http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json
+
+//Get one
+###
+GET http://localhost:3000/api/products/5fb34b054af60d9abd905253 HTTP/1.1
+Content-Type: application/json
+
+//Add new
+###
+POST http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json
+    
+{
+    "sector": "Miranda",
+    "precio": 90000000,
+    "categoria": "Casa",
+    "area": 50,
+    "estrato": 3,
+    "amoblado": "No",
+    "venta": "Si",
+    "imagen": "https://www.vivus.es/blog/wp-content/uploads/2019/04/hacerse-una-casa.jpeg",
+    "link": "https://www.arrendamientossantafe.com/propiedades/V8632/"
+}
+
+//Update
+###
+PUT http://localhost:3000/api/products/5fd16599bcf9292f78190eea HTTP/1.1
+Content-Type: application/json
+
+{
+    "sector": "Poblado",
+    "precio": 350000000,
+    "categoria": "Casa",
+    "area": 90,
+    "estrato": 5,
+    "amoblado": "No",
+    "venta": "Si",
+    "imagen": "https://megaricos.com/wp-content/uploads/2030/04/mansion-en-La-Quinta-California-1.jpg",
+    "link": "https://www.arrendamientossantafe.com/propiedades/V8632/"
+}
+
+
+//Delete
+###
+DELETE http://localhost:3000/api/products/5fd16599bcf9292f78190eea HTTP/1.1
+Content-Type: application/json

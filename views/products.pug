@@ -1,0 +1,52 @@
+//-probar pug
+//-ul
+    each product in products
+        li
+            strong= product.name
+            p= product.price
+            p Comprar
+
+extends layout.pug
+
+
+
+block hero
+    section.hero.is-dark.is-bold
+        .hero-body
+            .container
+                h1.title Arrendamientos SZA
+                h2.subtitle Encuentre las mejores propiedades para sus necesidades
+
+//- footer queda debajo
+block content
+    .container(style="flex: 1; padding: 50px 0;")    
+        .columns.is-multiline
+            //-each product in productMocks
+            each product in products
+                .column.is-one-quarter
+                    .card
+                        .card-image
+                            figure.image(style="height: 190px")
+                                img(src=product.imagen style="height: 100%; object-fit: contain; object-position:50% 30%")
+                        .card-content
+                            p #[b Sector:] #{product.sector}
+                            .linearoja
+                            p #[b Tipo:] #{product.categoria}
+                            .linearoja
+                            p #[b Área:] #{product.area} mts#[sup 3]
+                            .linearoja
+                            p #[b Estrato:] #{product.estrato}
+                            .linearoja
+                            p #[b Amoblado:] #{product.amoblado}
+                            .linearoja
+                            p #[b Venta:] #{product.venta}
+                            .linearoja
+                            p #[b Precio:] #{product.precio} COP
+                            .linearoja
+                            br
+                            a(href=product.link)
+                                .button.is-fullwidth.is-primary
+                                    span.icon
+                                        i.fas.fa-info
+                                    span #[b Más información]
+                                    

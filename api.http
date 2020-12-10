@@ -45,5 +45,5 @@ Content-Type: application/json
 
 //Delete
 ###
-DELETE http://localhost:3000/api/products/5fd16599bcf9292f78190eea HTTP/1.1
+DELETE http://localhost:3000/api/products/5fd171fcbcf9292f78190eec HTTP/1.1
 Content-Type: application/json
